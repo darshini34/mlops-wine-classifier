@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fdf6f0, #f3e3e6);
+    color: #3b1a24;
+}
+.hero {
+    background: linear-gradient(90deg, #4a0e1f, #8b1e3f);
+    color: #ffffff;
+    padding: 28px 40px;
+}
+.hero h1 { margin: 0; font-size: 2rem; }
+.hero p { margin: 6px 0 0; color: #f1d4da; }
+.container { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+label { display: flex; flex-direction: column; font-size: 0.9rem; font-weight: 600; }
+input {
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid #d9bfc6;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+button {
+    margin-top: 20px;
+    background: #8b1e3f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover { background: #4a0e1f; }
+.result-box {
+    margin-top: 20px;
+    background: #ffffff;
+    border-left: 6px solid #8b1e3f;
+    border-radius: 12px;
+    padding: 20px 24px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4a0e1f;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.error-box {
+    background: #fde8e8;
+    border-left: 6px solid #c0392b;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+}
+.status-row { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.badge {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.badge.ok { background: #2e7d32; }
+.badge.bad { background: #c0392b; }
+.status-text { font-size: 1.2rem; font-weight: 600; }
+.health-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.health-table th, .health-table td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ecd9de;
+}
+.health-table th { width: 40%; color: #8b1e3f; }
+.back-link {
+    display: inline-block;
+    background: #8b1e3f;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+}

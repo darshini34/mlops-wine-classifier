@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Check - Wine Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <h1>Service Health Check</h1>
+        <p>Wine Type Classification - Flask ML application</p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="status-row">
+                <span class="badge {{ 'ok' if info.status == 'ok' else 'bad' }}">
+                    {{ 'HEALTHY' if info.status == 'ok' else 'DOWN' }}
+                </span>
+                <span class="status-text">Application is running</span>
+            </div>
+
+            <table class="health-table">
+                <tr><th>Status</th><td>{{ info.status }}</td></tr>
+                <tr><th>Model loaded</th><td>{{ 'Yes' if info.model_loaded else 'No' }}</td></tr>
+                <tr><th>Model</th><td>Decision Tree pipeline (model.pkl)</td></tr>
+                <tr><th>Input features</th><td>{{ n_features }}</td></tr>
+                <tr><th>Classes</th><td>{{ classes | join(', ') }}</td></tr>
+            </table>
+
+            <a class="back-link" href="/">Open prediction form</a>
+        </div>
+    </main>
+</body>
+</html>
